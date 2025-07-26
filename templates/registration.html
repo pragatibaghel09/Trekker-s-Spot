@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="{% static 'registration.css' %}" />
+  </head>
+  <body>
+    <div class="navbar">
+      <h2>Trekker's Spot</h2>
+      <a href="'feedback">feedback</a>
+      <a href=" alltreks">all treks</a>
+      <a href=" contactus">contact us</a>
+      <a href=" aboutus">about us</a>
+      <a href="home">home</a>
+    </div>
+    <div class="box">
+      <h1>Register here</h1>
+      <form action="{% url 'registration' %}" method="post">
+        {% csrf_token %}
+        <input type="name" name="full_name" placeholder="Full Name" minlength ="5"required/>
+        <input type="name" name="mo_num" placeholder=" Mobile number " pattern="[789][0-9]{9}" maxlength="10"required  />
+        <input type="email" name="email" placeholder="Email ID (sample@gmail.com)" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
+        <input type="name" name="gender" placeholder="Gender" minlength="4" required />
+        <input type="name" name="age" placeholder="age" maxlength="2" required />
+        <input type="name" name="height" placeholder="Height(in Cm)" maxlength="3" required />
+        <input type="name" name="weight" placeholder="Weight(in Kg)" maxlength="2"required />
+        <input type="password" name="password1" placeholder="password" required />
+        <input type="password" name="password2" placeholder="confirm password" required/>
+        
+        <input type="submit" name="" value="registration" />
+      </form>
+    </div>
+  </body>
+</html>

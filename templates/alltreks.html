@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>alltreks</title>
+    <link rel="stylesheet" href="{% static 'alltreks.css'%}" />
+  </head>
+  <body>
+    <div class="navbar">
+      <h2>Trekker's Spot</h2>
+      <a href="feedback">feedback</a>
+      <a href="alltreks">all treks</a>
+      <a href="contactus">contact us</a>
+      <a href="aboutus">about us</a>
+      <a href="home">home</a>
+    </div>
+    <img src="{% static 'pic3.jpg'%}" alt="3rdstpic" />
+    <div class="container">
+    <h2>Treks in Indian States</h2>
+    <div class="dropdown">
+      <button class="dropbtn">Himachal Pradesh</button>
+      <div class="dropdown-content">
+      <a href="HPT">Hampta Pass Trek</a>
+      <a href="#">Pin Parvati Pass Trek</a>
+      <a href="#">Chandratal Lake Trek</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Uttarakhand</button>
+      <div class="dropdown-content">
+      <a href="#">Kedarnath Trek</a>
+      <a href="#">Kedartal Trek</a>
+      <a href="#">Rupin pass Trek</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Kashmir</button>
+      <div class="dropdown-content">
+      <a href="#">Kashmir Great Lakes Trek</a>
+      <a href="#">Naranag Mahlish Trek</a>
+      <a href="#">Tarsar Marsar Trek</a>
+      </div>
+    </div>
+    <div class="box">
+      <img src="{% static 'picH.jpg'%}" alt="">
+      <img src="{% static 'picU.jpg'%}" alt="">
+      <img src="{% static 'picK.jpg'%}" alt="">
+    </div>
+  </div>
+    <div class="bg_text">
+      <h1 style="font-size: 50px">All Trekking Trip</h1>
+    </div>
+    <footer>
+      <p>
+        "Look deep into nature and you will understand everything better." -
+        Albert Einstein
+      </p>
+    </footer>
+  </body>
+</html>

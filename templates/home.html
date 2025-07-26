@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home</title>
+    <link rel="stylesheet" href="{% static 'home.css' %}" />
+  </head>
+  <body>
+    <div class="navbar">
+      <h2>Trekker's Spot</h2>
+      <a href="feedback">feedback</a>
+      <a href="alltreks">all treks</a>
+      <a href="contactus">contact us</a>
+      <a href="aboutus">about us</a>
+      <a href="home">home</a>
+    </div>
+    <img src="{% static 'pic1.jpg'%}" alt="1stdpic" />
+    <div class="bg_text">
+      <h1 style="font-size: 50px">Welcome to Happiness<br></h1>
+      <h1 style="font-size: 40px">India's best trekking system</h1>
+    </div>
+    <footer>
+      <p>"Look deep into nature and you will understand everything better." -Albert Einstein</p>
+    </footer>
+  </body>
+</html>

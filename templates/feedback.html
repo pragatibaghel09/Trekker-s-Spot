@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>feedback</title>
+    <link rel="stylesheet" href="{% static 'feedback.css' %}" />
+  </head>
+  <body>
+    <div class="navbar">
+      <h2>Trekker's Spot</h2>
+      <a href="feedback">feedback</a>
+      <a href="alltreks">all treks</a>
+      <a href="contactus">contact us</a>
+      <a href="aboutus">about us</a>
+      <a href="home">home</a>
+    </div>
+    <img src="{% static 'picF.jpg'%}" alt="1stdpic" />
+    <div class="bg_text">
+      <h1 style="font-size: 50px">Feed back form</h1>
+    </div>
+    <div class="container">
+  <form action="{% url 'feedback'%}" method="post">
+    {% csrf_token %}
+    <label for="fname">Full Name</label>
+    <input type="text" id="fname" name="fname" placeholder="Your name.." required>
+
+    <label for="Email">Email-id</label>
+    <input type="text" id="Email" name="Email" placeholder="Enter your Email id" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+
+    <label for="Trektrip">Trekking trip</label>
+    <input type="text" id="Trektrip" name="Trektrip" placeholder="Which Trekking trip you went through .."maxlength="12" required>
+
+    <label for="text">Subject</label>
+    <textarea id="text" name="suggestions" placeholder=" Write your suggestion...." style="height:200px" minlength="4"required></textarea>
+
+    <input type="submit" value="feedback">
+  </form>
+</div>
+    <footer>
+      <p>"Look deep into nature and you will understand everything better." -Albert Einstein</p>
+    </footer>
+  </body>
+</html>

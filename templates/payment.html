@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment</title>
+    <link rel="stylesheet" href="{% static 'payment.css' %}" />
+  </head>
+  <body>
+    <div class="navbar">
+      <h2>Trekker's Spot</h2>
+      <a href="'feedback">feedback</a>
+      <a href=" alltreks">all treks</a>
+      <a href=" contactus">contact us</a>
+      <a href=" aboutus">about us</a>
+      <a href="home">home</a>
+    </div>
+    <div class="box">
+      <h1>Payment here</h1>
+      <form action="{% url 'payment' %}" method="post">
+        {% csrf_token %}
+        <input type="name" name="full_name" placeholder="Full Name" required />
+        <input type="name" name="mo_num" placeholder="Mobile number" pattern="[789][0-9]{9}" maxlength="10" required />
+        <input type="email" name="email" placeholder="Email ID (sample@gmail.com)" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
+        <input type="text" name="acnum" placeholder="Account number" maxlength="18" required />
+        <input type="text" name="card_type" placeholder="Card type" maxlength="10" required />
+        <input type="text" name="card_num" placeholder="Card number" maxlength="12"required />
+        <input type="text" name="cvv" placeholder="cvv" maxlength="3" required/>
+        
+        <input type="submit" name="" value="payment"/>
+  
+      </form>
+    </div>
+  </body>
+</html>
